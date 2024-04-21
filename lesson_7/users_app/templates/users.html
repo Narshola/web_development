@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/style.css">
+        <title>Users</title>
+    </head>
+    <body>
+        {% if header %}
+        <h1>{{ header }}</h1>
+        {% else %}
+        <h1>Header</h1>
+        {% endif %}
+        <ol>
+            {% for user in users_list %}
+            <li>{{ user[0] }}, {{ user[1] }} years old</li>
+            {% endfor %}
+        </ol>
+    </body>
+</html>
